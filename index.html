@@ -416,6 +416,33 @@
         .tag-wordpress { background: rgba(59,130,246,0.15); color: #60a5fa; border-color: rgba(59,130,246,0.3); }
         .tag-php { background: rgba(139,92,246,0.15); color: #a78bfa; border-color: rgba(139,92,246,0.3); }
         .tag-laravel { background: rgba(239,68,68,0.15); color: #fca5a5; border-color: rgba(239,68,68,0.3); }
+        .tag-glpi { background: rgba(16,185,129,0.15); color: #34d399; border-color: rgba(16,185,129,0.3); }
+        .tag-apache { background: rgba(249,115,22,0.15); color: #fdba74; border-color: rgba(249,115,22,0.35); }
+        .tag-linux { background: rgba(6,182,212,0.15); color: #67e8f9; border-color: rgba(6,182,212,0.3); }
+
+        /* --- Veille technologique --- */
+        .veille-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            width: 100%;
+            padding: 5px 0;
+        }
+        .veille-list li {
+            background: rgba(59,130,246,0.08);
+            border: 1px solid rgba(59,130,246,0.2);
+            border-radius: 10px;
+            padding: 12px 14px;
+            color: var(--text-main);
+            font-size: 0.98rem;
+            line-height: 1.5;
+        }
+        .veille-list li span {
+            color: var(--primary);
+            font-weight: 600;
+            margin-right: 8px;
+        }
 
         /* --- Progress Bar --- */
         .progress-bar {
@@ -510,7 +537,7 @@
             <p>Poursuite d'études en <b>Licence Pro</b> pour devenir DATA Analyst ou Consultant en Systèmes d'Information.</p>
         </div>
         <div class="visual-zone">
-            <img src="avenir.png" alt="Photo de profil" style="width:100%; height:100%; object-fit:cover; max-width:100%; max-height:100%; border-radius:12px;">
+            <img src="assets/avenir.png" alt="Photo de profil" style="width:100%; height:100%; object-fit:contain; max-width:100%; max-height:100%; border-radius:12px;">
         </div>
     </div>
 </section>
@@ -564,7 +591,7 @@
                     <td class="check">✕</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="check">✕</td><td></td><td></td><td class="check">✕</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                 </tr>
                 <tr>
-                    <td class="projet-col">GameSet</td>
+                    <td class="projet-col">Installation GLPI</td>
                     <td class="periode-col">15/09/2025<br>20/05/2026</td>
                     <td class="check">✕</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="check">✕</td><td></td><td></td><td class="check">✕</td><td></td><td></td><td></td><td class="check">✕</td><td></td><td></td><td></td><td></td>
                 </tr>
@@ -615,8 +642,8 @@
         </div>
         <div class="visual-zone" style="background: transparent; border: none; box-shadow: none;">
             <div class="screenshot-container">
-                <img src="port.png" class="screenshot screenshot-1" alt="Portfolio - Accueil" style="top: 0; left: 0; z-index: 1;">
-                <img src="proj.png" class="screenshot screenshot-2" alt="Portfolio - Projets" style="top: 120px; left: 120px; z-index: 2;">
+                <img src="assets/port.png" class="screenshot screenshot-1" alt="Portfolio - Accueil" style="top: 0; left: 0; z-index: 1;">
+                <img src="assets/proj.png" class="screenshot screenshot-2" alt="Portfolio - Projets" style="top: 120px; left: 120px; z-index: 2;">
             </div>
         </div>
     </div>
@@ -643,9 +670,9 @@
         </div>
         <div class="visual-zone" style="background: transparent; border: none; box-shadow: none;">
             <div class="screenshot-container">
-                <img src="vtc1.png" class="screenshot screenshot-1" alt="VTC - Accueil" style="top: 0; left: 0; z-index: 1;">
-                <img src="vtc2.png" class="screenshot screenshot-2" alt="VTC - Liste chauffeurs" style="top: 120px; left: 120px; z-index: 2;">
-                <img src="vtc3.png" class="screenshot screenshot-3" alt="VTC - Profil" style="top: 240px; left: 240px; z-index: 3;">
+                <img src="assets/vtc1.png" class="screenshot screenshot-1" alt="VTC - Accueil" style="top: 0; left: 0; z-index: 1;">
+                <img src="assets/vtc2.png" class="screenshot screenshot-2" alt="VTC - Liste chauffeurs" style="top: 120px; left: 120px; z-index: 2;">
+                <img src="assets/vtc3.png" class="screenshot screenshot-3" alt="VTC - Profil" style="top: 240px; left: 240px; z-index: 3;">
             </div>
         </div>
     </div>
@@ -671,9 +698,9 @@
         </div>
         <div class="visual-zone" style="background: transparent; border: none; box-shadow: none;">
             <div class="screenshot-container">
-                <img src="promise1.png" class="screenshot screenshot-1" alt="Transformation numérique" style="top: 0; left: 0; z-index: 1;">
-                <img src="promise2.png" class="screenshot screenshot-2" alt="Icone IT" style="top: 120px; left: 120px; z-index: 2;">
-                <img src="promise3.png" class="screenshot screenshot-3" alt="Collaboration" style="top: 240px; left: 240px; z-index: 3;">
+                <img src="assets/promise1.png" class="screenshot screenshot-1" alt="Transformation numérique" style="top: 0; left: 0; z-index: 1;">
+                <img src="assets/promise2.png" class="screenshot screenshot-2" alt="Icone IT" style="top: 120px; left: 120px; z-index: 2;">
+                <img src="assets/promise3.png" class="screenshot screenshot-3" alt="Collaboration" style="top: 240px; left: 240px; z-index: 3;">
             </div>
         </div>
     </div>
@@ -683,24 +710,27 @@
     <div class="slide-content">
         <div class="text-zone">
             <h2>06. Projet 4</h2>
-            <h1>GameSet</h1>
+            <h1>Installation GLPI</h1>
             <div class="tech-tags">
-                <span class="tech-tag tag-symfony">Symfony</span>
+                <span class="tech-tag tag-glpi">GLPI</span>
+                <span class="tech-tag tag-linux">Linux</span>
+                <span class="tech-tag tag-apache">Apache</span>
+                <span class="tech-tag tag-php">PHP</span>
                 <span class="tech-tag tag-mysql">MySQL</span>
-                <span class="tech-tag tag-twig">Twig</span>
-                <span class="tech-tag tag-bootstrap">Bootstrap</span>
             </div>
             <ul>
-                <li><b>Objectif :</b> Création d'une application de gestion de Tournoi.</li>
-                <li><b>Stack :</b> Symfony, MySQL, HTML, Twig, Bootstrap.</li>
-                <li><b>Challenge :</b> Gestion des inscriptions, des joueurs et des classements.</li>
-                <li><b>Résultat :</b> Interface fluide et sécurisée.</li>
+                <li><b>Objectif :</b> Déployer une solution de gestion de parc et de tickets pour centraliser le support.</li>
+                <li><b>Stack :</b> GLPI, Apache, PHP, MySQL, environnement Linux.</li>
+                <li><b>Fonctionnalités :</b> Inventaire matériel, création de tickets, suivi des interventions.</li>
+                <li><b>Challenge :</b> Paramétrage des profils utilisateurs et des workflows d'incidents.</li>
+                <li><b>Résultat :</b> Processus de support structuré et meilleure traçabilité des demandes.</li>
             </ul>
         </div>
         <div class="visual-zone" style="background: transparent; border: none; box-shadow: none;">
             <div class="screenshot-container">
-                <img src="screen1.png" class="screenshot screenshot-1" alt="Capture 1">
-                <img src="screen2.png" class="screenshot screenshot-2" alt="Capture 2">
+                <img src="assets/glpi1.png" class="screenshot screenshot-1" alt="GLPI - Installation Debian" style="top: 0; left: 0; z-index: 1;">
+                <img src="assets/glpi2.png" class="screenshot screenshot-2" alt="GLPI - Assistant d'installation" style="top: 120px; left: 120px; z-index: 2;">
+                <img src="assets/glpi3.png" class="screenshot screenshot-3" alt="GLPI - Création et suivi des tickets" style="top: 240px; left: 240px; z-index: 3;">
             </div>
         </div>
     </div>
@@ -728,10 +758,10 @@
         </div>
         <div class="visual-zone" style="background: transparent; border: none; box-shadow: none;">
             <div class="screenshot-container">
-                <img src="stage1.png" class="screenshot screenshot-1" alt="Théraform - Accueil" style="top: 0; left: 0; z-index: 1;">
-                <img src="stage2.png" class="screenshot screenshot-2" alt="Théraform - Réservation" style="top: 120px; left: 120px; z-index: 2;">
-                <img src="stage3.png" class="screenshot screenshot-3" alt="Théraform - Blog" style="top: 240px; left: 240px; z-index: 3;">  
-                <img src="stage4.png" class="screenshot screenshot-4" alt="Théraform - Contact" style="top: 360px; left: 360px; z-index: 4;">
+                <img src="assets/stage1.png" class="screenshot screenshot-1" alt="Théraform - Accueil" style="top: 0; left: 0; z-index: 1;">
+                <img src="assets/stage2.png" class="screenshot screenshot-2" alt="Théraform - Réservation" style="top: 120px; left: 120px; z-index: 2;">
+                <img src="assets/stage3.png" class="screenshot screenshot-3" alt="Théraform - Blog" style="top: 240px; left: 240px; z-index: 3;">  
+                <img src="assets/stage4.png" class="screenshot screenshot-4" alt="Théraform - Contact" style="top: 360px; left: 360px; z-index: 4;">
             </div>
         </div>
     </div>
