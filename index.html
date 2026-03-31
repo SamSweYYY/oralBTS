@@ -153,6 +153,216 @@
             font-weight: 600;
         }
 
+        /* --- Contexte Compétences enrichi --- */
+        .competence-context {
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            max-height: 220px;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+        .competence-context::-webkit-scrollbar {
+            width: 4px;
+        }
+        .competence-context::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+        .comp-item {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+            background: rgba(59,130,246,0.07);
+            font-size: 0.78rem;
+            line-height: 1.45;
+            color: var(--text-muted);
+        }
+        .comp-item .comp-name {
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.8rem;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .comp-item.bloc-agile { border-left-color: var(--cyan); }
+        .comp-item.bloc-web { border-left-color: var(--accent); }
+        .comp-item.bloc-dev { border-left-color: var(--purple); }
+        .comp-item.bloc-cyber { border-left-color: var(--orange); }
+        .comp-item.bloc-infra { border-left-color: var(--pink); }
+        .comp-item.bloc-pro { border-left-color: var(--yellow); }
+        .comp-context-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+
+        /* --- Slide Introduction --- */
+        .intro-layout {
+            grid-template-columns: 1.05fr 0.95fr;
+            align-items: stretch;
+        }
+        .intro-card,
+        .intro-panel {
+            position: relative;
+            border-radius: 24px;
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.92), rgba(15, 23, 42, 0.96));
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+            overflow: hidden;
+        }
+        .intro-card {
+            padding: 38px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 520px;
+        }
+        .intro-card::before,
+        .intro-panel::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: radial-gradient(circle at top right, rgba(59,130,246,0.16), transparent 42%);
+        }
+        .intro-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(59,130,246,0.12);
+            border: 1px solid rgba(59,130,246,0.28);
+            color: var(--primary);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            width: fit-content;
+            margin-bottom: 22px;
+        }
+        .intro-card h1 {
+            font-size: 3.4rem;
+            margin-bottom: 16px;
+        }
+        .intro-lead {
+            font-size: 1.2rem;
+            color: var(--text-main);
+            line-height: 1.7;
+            margin-bottom: 18px;
+            -webkit-text-fill-color: unset;
+        }
+        .intro-copy {
+            font-size: 1.02rem;
+            color: var(--text-muted);
+            line-height: 1.85;
+            max-width: 95%;
+            -webkit-text-fill-color: unset;
+        }
+        .intro-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+        .intro-tag {
+            padding: 10px 14px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-main);
+            background: rgba(148, 163, 184, 0.08);
+            border: 1px solid rgba(148, 163, 184, 0.16);
+        }
+        .intro-meta {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 30px;
+        }
+        .intro-meta-item {
+            padding: 16px 18px;
+            border-radius: 18px;
+            background: rgba(15, 23, 42, 0.72);
+            border: 1px solid rgba(59,130,246,0.12);
+        }
+        .intro-meta-item span {
+            display: block;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .intro-meta-item strong {
+            color: var(--text-main);
+            font-size: 0.98rem;
+            line-height: 1.4;
+        }
+        .intro-panel {
+            padding: 24px;
+            display: grid;
+            grid-template-rows: 240px 1fr;
+            gap: 20px;
+            min-height: 520px;
+        }
+        .intro-visual {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(59,130,246,0.18);
+            background: linear-gradient(135deg, rgba(6,182,212,0.12), rgba(168,85,247,0.12));
+        }
+        .intro-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.92;
+        }
+        .intro-visual-badge {
+            position: absolute;
+            left: 18px;
+            bottom: 18px;
+            padding: 10px 14px;
+            border-radius: 14px;
+            background: rgba(15, 23, 42, 0.82);
+            border: 1px solid rgba(148, 163, 184, 0.16);
+            color: var(--text-main);
+            font-size: 0.9rem;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+        }
+        .intro-agenda {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            align-content: start;
+        }
+        .intro-agenda-item {
+            padding: 16px 16px 18px;
+            border-radius: 18px;
+            background: rgba(15, 23, 42, 0.75);
+            border: 1px solid rgba(148, 163, 184, 0.12);
+        }
+        .intro-agenda-item strong {
+            display: block;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+        .intro-agenda-item p {
+            margin: 0;
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            -webkit-text-fill-color: unset;
+        }
+
         /* Colonne Visuelle (Image, Code, Démo) */
         .visual-zone {
             background-color: var(--bg-card);
@@ -400,6 +610,9 @@
             .visual-zone { height: 300px; }
             .text-zone h1 { font-size: 2rem; }
             .tech-tags { flex-wrap: wrap; }
+            .intro-layout { grid-template-columns: 1fr; }
+            .intro-card, .intro-panel { min-height: auto; }
+            .intro-meta, .intro-agenda { grid-template-columns: 1fr; }
         }
 
         /* --- Tech Tags --- */
@@ -525,122 +738,66 @@
     </div>
 </section>
 
-<section class="slide">
-    <div class="slide-content">
-        <div class="text-zone">
-            <h2>01. À propos</h2>
-            <h1>Mon Parcours</h1>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2027 - 2028</div>
-                    <div class="timeline-content"><b>Master MIAGE</b></div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2026 - 2027</div>
-                    <div class="timeline-content"><b>Licence MIAGE</b></div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2023 - 2026</div>
-                    <div class="timeline-content"><b>BTS SIO Option SLAM</b><br>Apprentissage du développement web et applicatif.</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2022</div>
-                    <div class="timeline-content"><b>Baccalauréat Général</b><br>Options NSI / Maths</div>
+<section class="slide intro-slide">
+    <div class="slide-content intro-layout">
+        <div class="intro-card">
+            <div>
+                <div class="intro-kicker">01. Introduction</div>
+                <h1>Samuel Lalanne</h1>
+                <p class="intro-lead">Étudiant en <b>BTS SIO option SLAM</b> au <b>lycée Fulbert à Chartres</b>.</p>
+                <div class="intro-tags">
+                    <span class="intro-tag">Développement web</span>
+                    <span class="intro-tag">Applications métier</span>
+                    <span class="intro-tag">Outils & support</span>
+                    <span class="intro-tag">Projet professionnel</span>
                 </div>
             </div>
-            <h2>Objectif d'avenir</h2>
-            <p>Poursuite d'études en <b>Licence Pro</b> pour devenir DATA Analyst ou Consultant en Systèmes d'Information.</p>
+            <div class="intro-meta">
+                <div class="intro-meta-item">
+                    <span>Formation</span>
+                    <strong>BTS SIO SLAM</strong>
+                </div>
+                <div class="intro-meta-item">
+                    <span>Établissement</span>
+                    <strong>Lycée Fulbert<br>Chartres</strong>
+                </div>
+                <div class="intro-meta-item">
+                    <span>Session</span>
+                    <strong>E5 2026</strong>
+                </div>
+            </div>
         </div>
-        <div class="visual-zone">
-            <img src="assets/avenir.png" alt="Photo de profil" style="width:100%; height:100%; object-fit:contain; max-width:100%; max-height:100%; border-radius:12px;">
+        <div class="intro-panel">
+            <div class="intro-visual">
+                <img src="assets/avenir.png" alt="Présentation Samuel Lalanne">
+                <div class="intro-visual-badge">Présentation de mon parcours et de mes réalisations</div>
+            </div>
+            <div class="intro-agenda">
+                <div class="intro-agenda-item">
+                    <strong>VTC Manager</strong>
+                    <p>Application React/TypeScript autour d'un CRUD complet.</p>
+                </div>
+                <div class="intro-agenda-item">
+                    <strong>Promise Guinée</strong>
+                    <p>Projet web vitrine avec une approche orientée transformation numérique.</p>
+                </div>
+                <div class="intro-agenda-item">
+                    <strong>Installation GLPI</strong>
+                    <p>Mise en place d'un outil de gestion de parc et de tickets.</p>
+                </div>
+                <div class="intro-agenda-item">
+                    <strong>Théraform & Portfolio</strong>
+                    <p>Stage, présence en ligne et valorisation de mon profil professionnel.</p>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
-
-<section class="slide tableau-slide">
-    <div class="slide-content">
-        <div class="tableau-title">
-            <h2>02. Synthèse</h2>
-            <h1>Tableau des Réalisations</h1>
-        </div>
-        <table class="tableau-synthese">
-            <thead>
-                <tr>
-                    <th rowspan="2" style="width:13%">Réalisations professionnelles</th>
-                    <th rowspan="2" style="width:8%">Période</th>
-                    <th colspan="5">Gérer le patrimoine informatique</th>
-                    <th colspan="3">Répondre aux incidents et aux demandes d'assistance et d'évolution</th>
-                    <th colspan="3">Développer la présence en ligne de l'organisation</th>
-                    <th colspan="3">Travailler en mode projet</th>
-                    <th colspan="2">Mettre à disposition un service informatique</th>
-                    <th colspan="4">Organiser son développement professionnel</th>
-                </tr>
-                <tr>
-                    <th class="comp-header">Recenser et identifier les ressources numériques</th>
-                    <th class="comp-header">Exploiter des référentiels, normes et standards</th>
-                    <th class="comp-header">Mettre en place et vérifier les niveaux d'habilitation</th>
-                    <th class="comp-header">Vérifier les conditions de continuité d'un service</th>
-                    <th class="comp-header">Gérer des sauvegardes</th>
-                    <th class="comp-header">Collecter, suivre et orienter des demandes</th>
-                    <th class="comp-header">Traiter des demandes concernant les services réseau et système</th>
-                    <th class="comp-header">Traiter des demandes concernant les applications</th>
-                    <th class="comp-header">Participer à la valorisation de l'image de l'organisation</th>
-                    <th class="comp-header">Référencer les services en ligne et mesurer leur visibilité</th>
-                    <th class="comp-header">Participer à l'évolution d'un site Web</th>
-                    <th class="comp-header">Analyser les objectifs et modalités d'organisation d'un projet</th>
-                    <th class="comp-header">Planifier les activités</th>
-                    <th class="comp-header">Évaluer les indicateurs de suivi d'un projet</th>
-                    <th class="comp-header">Réaliser les tests d'intégration et d'acceptation</th>
-                    <th class="comp-header">Déployer un service</th>
-                    <th class="comp-header">Mettre en place son environnement d'apprentissage</th>
-                    <th class="comp-header">Mettre en œuvre des outils de veille informationnelle</th>
-                    <th class="comp-header">Gérer son identité professionnelle</th>
-                    <th class="comp-header">Développer son projet professionnel</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="section-row"><td colspan="22">Réalisations en cours de formation</td></tr>
-                <tr>
-                    <td class="projet-col">VTC Manager</td>
-                    <td class="periode-col">02/12/2025<br>13/01/2026</td>
-                    <td class="check">✕</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="check">✕</td><td></td><td></td><td class="check">✕</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                </tr>
-                <tr>
-                    <td class="projet-col">Installation GLPI</td>
-                    <td class="periode-col">15/09/2025<br>20/05/2026</td>
-                    <td class="check">✕</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="check">✕</td><td></td><td></td><td class="check">✕</td><td></td><td></td><td></td><td class="check">✕</td><td></td><td></td><td></td><td></td>
-                </tr>
-                <tr>
-                    <td class="projet-col">Gestion incidents GLPI</td>
-                    <td class="periode-col">30/09/2024<br>30/09/2024</td>
-                    <td class="check">✕</td><td></td><td></td><td></td><td></td><td class="check">✕</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="check">✕</td><td></td><td></td><td></td><td></td>
-                </tr>
-                <tr>
-                    <td class="projet-col">Portfolio</td>
-                    <td class="periode-col">03/06/2024<br>20/05/2026</td>
-                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="check">✕</td>
-                </tr>
-                <tr class="section-row"><td colspan="22">Réalisations en milieu professionnel — 1ère année</td></tr>
-                <tr>
-                    <td class="projet-col">Promise Guinée</td>
-                    <td class="periode-col">03/06/2024<br>12/07/2024</td>
-                    <td class="check">✕</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="check">✕</td><td></td><td></td><td></td><td></td>
-                </tr>
-                <tr class="section-row"><td colspan="22">Réalisations en milieu professionnel — 2ème année</td></tr>
-                <tr>
-                    <td class="projet-col">Théraform</td>
-                    <td class="periode-col">05/01/2026<br>27/02/2026</td>
-                    <td class="check">✕</td><td></td><td></td><td></td><td></td><td></td><td class="check">✕</td><td></td><td></td><td></td><td></td><td class="check">✕</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="check">✕</td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 </section>
 
 <section class="slide">
     <div class="slide-content">
         <div class="text-zone">
-            <h2>03. Projet 1</h2>
+            <h2>02. Projet 1</h2>
             <h1>VTC Manager</h1>
             <div class="tech-tags">
                 <span class="tech-tag tag-react">React</span>
@@ -652,10 +809,19 @@
                 <li><b>Objectif :</b> Application de gestion de chauffeurs VTC (CRUD complet).</li>
                 <li><b>Stack :</b> React, TypeScript, Vite, Tailwind CSS.</li>
                 <li><b>Fonctionnalités :</b> Inscription, connexion, profil, liste et suppression de chauffeurs.</li>
+                <li><b>URL :</b> <a href="https://samsweyyy.github.io/frontend-vtc-project/" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">samsweyyy.github.io/frontend-vtc-project</a></li>
                 <li><b>Challenge :</b> Authentification sécurisée et gestion des rôles.</li>
                 <li><b>Résultat :</b> Interface moderne et responsive pour la gestion de flotte.</li>
             </ul>
-            <div class="competence-box"><strong>Correspondance tableau :</strong> Travailler en mode projet - Analyser les objectifs et modalités d'organisation d'un projet.</div>
+            <div class="comp-context-title">Compétences mobilisées</div>
+            <div class="competence-context">
+                <div class="comp-item bloc-agile"><span class="comp-name">Travailler en mode projet</span>Découpage en User Stories, organisation du développement en sprints itératifs.</div>
+                <div class="comp-item bloc-dev"><span class="comp-name">Concevoir et développer une solution applicative</span>Développement itératif avec React/TypeScript, POO via composants et interfaces typées.</div>
+                <div class="comp-item bloc-agile"><span class="comp-name">Évaluer la qualité d'une solution applicative</span>Tests et validation à chaque itération du CRUD (chauffeurs, profils).</div>
+                <div class="comp-item bloc-web"><span class="comp-name">Développer la présence en ligne</span>Interface web responsive avec Tailwind CSS et design moderne.</div>
+                <div class="comp-item bloc-cyber"><span class="comp-name">Sécuriser les équipements et usages</span>Authentification sécurisée (Login/Password) et gestion des rôles.</div>
+                <div class="comp-item bloc-cyber"><span class="comp-name">Assurer la cybersécurité</span>Protection contre les failles XSS (échappement natif React).</div>
+            </div>
         </div>
         <div class="visual-zone" style="background: transparent; border: none; box-shadow: none;">
             <div class="screenshot-container">
@@ -670,7 +836,7 @@
 <section class="slide">
     <div class="slide-content">
         <div class="text-zone">
-            <h2>04. Projet 2</h2>
+            <h2>03. Projet 2</h2>
             <h1>Promise Guinée</h1>
             <div class="tech-tags">
                 <span class="tech-tag tag-html">HTML</span>
@@ -685,7 +851,13 @@
                 <li><b>Challenge :</b> Modernisation des systèmes d'information (Cloud, ERP, IA).</li>
                 <li><b>Résultat :</b> Solutions sur mesure pour optimiser l'efficacité opérationnelle.</li>
             </ul>
-            <div class="competence-box"><strong>Correspondance tableau :</strong> Gérer le patrimoine informatique - Recenser et identifier les ressources numériques.</div>
+            <div class="comp-context-title">Compétences mobilisées</div>
+            <div class="competence-context">
+                <div class="comp-item bloc-web"><span class="comp-name">Développer la présence en ligne</span>Création d'une interface web responsive (HTML/CSS) pour la vitrine de l'entreprise.</div>
+                <div class="comp-item bloc-web"><span class="comp-name">Gérer les données</span>Conception de la base de données et requêtes SQL (CRUD) côté back-end PHP.</div>
+                <div class="comp-item bloc-cyber"><span class="comp-name">Protéger les données (RGPD)</span>Gestion des sessions utilisateurs et respect de la confidentialité des données.</div>
+                <div class="comp-item bloc-cyber"><span class="comp-name">Sécuriser les équipements et usages</span>Mise en place d'une authentification sécurisée (Login/Password).</div>
+            </div>
         </div>
         <div class="visual-zone" style="background: transparent; border: none; box-shadow: none;">
             <div class="screenshot-container">
@@ -700,7 +872,7 @@
 <section class="slide">
     <div class="slide-content">
         <div class="text-zone">
-            <h2>05. Projet 3</h2>
+            <h2>04. Projet 3</h2>
             <h1>Installation GLPI</h1>
             <div class="tech-tags">
                 <span class="tech-tag tag-glpi">GLPI</span>
@@ -716,7 +888,13 @@
                 <li><b>Challenge :</b> Paramétrage des profils utilisateurs et des workflows d'incidents.</li>
                 <li><b>Résultat :</b> Processus de support structuré et meilleure traçabilité des demandes.</li>
             </ul>
-            <div class="competence-box"><strong>Correspondance tableau :</strong> Répondre aux incidents et aux demandes d'assistance - Collecter, suivre et orienter des demandes.</div>
+            <div class="comp-context-title">Compétences mobilisées</div>
+            <div class="competence-context">
+                <div class="comp-item bloc-infra"><span class="comp-name">Gérer le patrimoine informatique</span>Recensement et identification des ressources numériques via l'inventaire GLPI.</div>
+                <div class="comp-item bloc-infra"><span class="comp-name">Répondre aux incidents et demandes</span>Collecte, suivi et orientation des demandes via le système de tickets.</div>
+                <div class="comp-item bloc-cyber"><span class="comp-name">Sécuriser les équipements et usages</span>Gestion des profils utilisateurs et mise en place des niveaux d'habilitation.</div>
+                <div class="comp-item bloc-infra"><span class="comp-name">Mettre à disposition un service</span>Déploiement du service GLPI sur serveur Linux (Apache/PHP/MySQL).</div>
+            </div>
         </div>
         <div class="visual-zone" style="background: transparent; border: none; box-shadow: none;">
             <div class="screenshot-container">
@@ -731,7 +909,7 @@
 <section class="slide">
     <div class="slide-content">
         <div class="text-zone">
-            <h2>06. Projet 4</h2>
+            <h2>05. Projet 4</h2>
             <h1>Théraform</h1>
             <div class="tech-tags">
                 <span class="tech-tag tag-wordpress">WordPress</span>
@@ -747,7 +925,15 @@
                 <li><b>Fonctionnalités :</b> Réservation de séances côté administrateur, et thérapeute avec le CRUD.</li>
                 <li><b>Résultat :</b> Site fonctionnel avec gestion complète des réservations et des plannings.</li>
             </ul>
-            <div class="competence-box"><strong>Correspondance tableau :</strong> Développer la présence en ligne de l'organisation - Participer à l'évolution d'un site Web.</div>
+            <div class="comp-context-title">Compétences mobilisées</div>
+            <div class="competence-context">
+                <div class="comp-item bloc-agile"><span class="comp-name">Travailler en mode projet</span>Stage en environnement professionnel, sprints itératifs et retours client (Sprint Review).</div>
+                <div class="comp-item bloc-dev"><span class="comp-name">Concevoir et développer une solution applicative</span>Développement itératif avec Laravel, adaptation du code après retours client.</div>
+                <div class="comp-item bloc-web"><span class="comp-name">Gérer les données</span>CRUD complet des réservations, conception de la base de données MySQL.</div>
+                <div class="comp-item bloc-web"><span class="comp-name">Développer la présence en ligne</span>Site WordPress responsive, évolution et maintenance du site vitrine.</div>
+                <div class="comp-item bloc-cyber"><span class="comp-name">Protéger les données (RGPD)</span>Hachage des mots de passe (bcrypt), gestion sécurisée des sessions.</div>
+                <div class="comp-item bloc-cyber"><span class="comp-name">Assurer la cybersécurité</span>Requêtes préparées (protection injection SQL), protection contre les failles XSS.</div>
+            </div>
         </div>
         <div class="visual-zone" style="background: transparent; border: none; box-shadow: none;">
             <div class="screenshot-container">
@@ -763,8 +949,8 @@
 <section class="slide">
     <div class="slide-content">
         <div class="text-zone">
-            <h2>07. Projet 5</h2>
-            <h1>Mon Portfolio</h1>
+            <h2>06. Développement Personnel</h2>
+            <h1>Portfolio & LinkedIn</h1>
             <div class="tech-tags">
                 <span class="tech-tag tag-html">HTML</span>
                 <span class="tech-tag tag-css">CSS</span>
@@ -774,16 +960,55 @@
                 <li><b>Objectif :</b> Création d'un portfolio personnel pour présenter mes projets et compétences.</li>
                 <li><b>Stack :</b> HTML, CSS, JavaScript.</li>
                 <li><b>Fonctionnalités :</b> Présentation des projets, section à propos, contact.</li>
+                <li><b>URL :</b> <a href="https://samuellalanne.com" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">samuellalanne.com</a></li>
                 <li><b>Challenge :</b> Design responsive et animations fluides.</li>
                 <li><b>Résultat :</b> Site vitrine moderne mettant en valeur mon parcours.</li>
             </ul>
-            <div class="competence-box"><strong>Correspondance tableau :</strong> Organiser son développement professionnel - Développer son projet professionnel.</div>
+            <div class="comp-context-title">Compétences mobilisées</div>
+            <div class="competence-context">
+                <div class="comp-item bloc-web"><span class="comp-name">Développer la présence en ligne</span>Création d'un site personnel responsive (HTML/CSS/JS) valorisant l'image professionnelle.</div>
+                <div class="comp-item bloc-pro"><span class="comp-name">Développer son projet professionnel</span>Mise en valeur des compétences, projets et parcours pour les recruteurs.</div>
+                <div class="comp-item bloc-pro"><span class="comp-name">Gérer son identité professionnelle</span>Présence en ligne professionnelle et cohérente avec le parcours BTS SIO.</div>
+            </div>
         </div>
         <div class="visual-zone" style="background: transparent; border: none; box-shadow: none;">
             <div class="screenshot-container">
                 <img src="assets/port.png" class="screenshot screenshot-1" alt="Portfolio - Accueil" style="top: 0; left: 0; z-index: 1;">
                 <img src="assets/proj.png" class="screenshot screenshot-2" alt="Portfolio - Projets" style="top: 120px; left: 120px; z-index: 2;">
+                <img src="assets/linkedin.png" class="screenshot screenshot-3" alt="LinkedIn - Samuel Lalanne" style="top: 240px; left: 240px; z-index: 3; width: 72%;">
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <div class="slide-content">
+        <div class="text-zone">
+            <h2>07. À venir</h2>
+            <h1>Mon Parcours & Perspectives</h1>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2028+</div>
+                    <div class="timeline-content"><b>Master MIAGE</b><br>Spécialisation en systèmes d'information et data.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2026 - 2027</div>
+                    <div class="timeline-content"><b>Licence MIAGE</b><br>Méthodes informatiques appliquées à la gestion.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - 2026</div>
+                    <div class="timeline-content"><b>BTS SIO Option SLAM</b><br>Développement web, applicatif et gestion de projets IT.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content"><b>Baccalauréat Général</b><br>Options NSI / Maths</div>
+                </div>
+            </div>
+            <h2>Objectif</h2>
+            <p>Devenir <b>DATA Analyst</b> ou <b>Consultant en Systèmes d'Information</b> en poursuivant vers un Master MIAGE.</p>
+        </div>
+        <div class="visual-zone">
+            <img src="assets/avenir.png" alt="Perspectives d'avenir" style="width:100%; height:100%; object-fit:contain; max-width:100%; max-height:100%; border-radius:12px;">
         </div>
     </div>
 </section>
