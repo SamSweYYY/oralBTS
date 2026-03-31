@@ -138,6 +138,21 @@
             margin-right: 10px;
         }
 
+        .competence-box {
+            margin-top: 14px;
+            padding: 12px 14px;
+            border-radius: 10px;
+            border: 1px solid rgba(59,130,246,0.35);
+            background: rgba(59,130,246,0.1);
+            color: var(--text-main);
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+        .competence-box strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
         /* Colonne Visuelle (Image, Code, Démo) */
         .visual-zone {
             background-color: var(--bg-card);
@@ -626,33 +641,6 @@
     <div class="slide-content">
         <div class="text-zone">
             <h2>03. Projet 1</h2>
-            <h1>Mon Portfolio</h1>
-            <div class="tech-tags">
-                <span class="tech-tag tag-html">HTML</span>
-                <span class="tech-tag tag-css">CSS</span>
-                <span class="tech-tag tag-js">JavaScript</span>
-            </div>
-            <ul>
-                <li><b>Objectif :</b> Création d'un portfolio personnel pour présenter mes projets et compétences.</li>
-                <li><b>Stack :</b> HTML, CSS, JavaScript.</li>
-                <li><b>Fonctionnalités :</b> Présentation des projets, section à propos, contact.</li>
-                <li><b>Challenge :</b> Design responsive et animations fluides.</li>
-                <li><b>Résultat :</b> Site vitrine moderne mettant en valeur mon parcours.</li>
-            </ul>
-        </div>
-        <div class="visual-zone" style="background: transparent; border: none; box-shadow: none;">
-            <div class="screenshot-container">
-                <img src="assets/port.png" class="screenshot screenshot-1" alt="Portfolio - Accueil" style="top: 0; left: 0; z-index: 1;">
-                <img src="assets/proj.png" class="screenshot screenshot-2" alt="Portfolio - Projets" style="top: 120px; left: 120px; z-index: 2;">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="slide">
-    <div class="slide-content">
-        <div class="text-zone">
-            <h2>04. Projet 2</h2>
             <h1>VTC Manager</h1>
             <div class="tech-tags">
                 <span class="tech-tag tag-react">React</span>
@@ -667,6 +655,7 @@
                 <li><b>Challenge :</b> Authentification sécurisée et gestion des rôles.</li>
                 <li><b>Résultat :</b> Interface moderne et responsive pour la gestion de flotte.</li>
             </ul>
+            <div class="competence-box"><strong>Correspondance tableau :</strong> Travailler en mode projet - Analyser les objectifs et modalités d'organisation d'un projet.</div>
         </div>
         <div class="visual-zone" style="background: transparent; border: none; box-shadow: none;">
             <div class="screenshot-container">
@@ -681,7 +670,7 @@
 <section class="slide">
     <div class="slide-content">
         <div class="text-zone">
-            <h2>05. Projet 3</h2>
+            <h2>04. Projet 2</h2>
             <h1>Promise Guinée</h1>
             <div class="tech-tags">
                 <span class="tech-tag tag-html">HTML</span>
@@ -692,9 +681,11 @@
             <ul>
                 <li><b>Objectif :</b> Accompagner la transformation numérique des entreprises.</li>
                 <li><b>Services :</b> Conseil, ingénierie digitale, solutions technologiques.</li>
+                <li><b>URL :</b> <a href="https://www.promiseguinee.com/" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">www.promiseguinee.com</a></li>
                 <li><b>Challenge :</b> Modernisation des systèmes d'information (Cloud, ERP, IA).</li>
                 <li><b>Résultat :</b> Solutions sur mesure pour optimiser l'efficacité opérationnelle.</li>
             </ul>
+            <div class="competence-box"><strong>Correspondance tableau :</strong> Gérer le patrimoine informatique - Recenser et identifier les ressources numériques.</div>
         </div>
         <div class="visual-zone" style="background: transparent; border: none; box-shadow: none;">
             <div class="screenshot-container">
@@ -709,7 +700,7 @@
 <section class="slide">
     <div class="slide-content">
         <div class="text-zone">
-            <h2>06. Projet 4</h2>
+            <h2>05. Projet 3</h2>
             <h1>Installation GLPI</h1>
             <div class="tech-tags">
                 <span class="tech-tag tag-glpi">GLPI</span>
@@ -725,6 +716,7 @@
                 <li><b>Challenge :</b> Paramétrage des profils utilisateurs et des workflows d'incidents.</li>
                 <li><b>Résultat :</b> Processus de support structuré et meilleure traçabilité des demandes.</li>
             </ul>
+            <div class="competence-box"><strong>Correspondance tableau :</strong> Répondre aux incidents et aux demandes d'assistance - Collecter, suivre et orienter des demandes.</div>
         </div>
         <div class="visual-zone" style="background: transparent; border: none; box-shadow: none;">
             <div class="screenshot-container">
@@ -739,7 +731,7 @@
 <section class="slide">
     <div class="slide-content">
         <div class="text-zone">
-            <h2>07. Projet 5</h2>
+            <h2>06. Projet 4</h2>
             <h1>Théraform</h1>
             <div class="tech-tags">
                 <span class="tech-tag tag-wordpress">WordPress</span>
@@ -755,6 +747,7 @@
                 <li><b>Fonctionnalités :</b> Réservation de séances côté administrateur, et thérapeute avec le CRUD.</li>
                 <li><b>Résultat :</b> Site fonctionnel avec gestion complète des réservations et des plannings.</li>
             </ul>
+            <div class="competence-box"><strong>Correspondance tableau :</strong> Développer la présence en ligne de l'organisation - Participer à l'évolution d'un site Web.</div>
         </div>
         <div class="visual-zone" style="background: transparent; border: none; box-shadow: none;">
             <div class="screenshot-container">
@@ -762,6 +755,34 @@
                 <img src="assets/stage2.png" class="screenshot screenshot-2" alt="Théraform - Réservation" style="top: 120px; left: 120px; z-index: 2;">
                 <img src="assets/stage3.png" class="screenshot screenshot-3" alt="Théraform - Blog" style="top: 240px; left: 240px; z-index: 3;">  
                 <img src="assets/stage4.png" class="screenshot screenshot-4" alt="Théraform - Contact" style="top: 360px; left: 360px; z-index: 4;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <div class="slide-content">
+        <div class="text-zone">
+            <h2>07. Projet 5</h2>
+            <h1>Mon Portfolio</h1>
+            <div class="tech-tags">
+                <span class="tech-tag tag-html">HTML</span>
+                <span class="tech-tag tag-css">CSS</span>
+                <span class="tech-tag tag-js">JavaScript</span>
+            </div>
+            <ul>
+                <li><b>Objectif :</b> Création d'un portfolio personnel pour présenter mes projets et compétences.</li>
+                <li><b>Stack :</b> HTML, CSS, JavaScript.</li>
+                <li><b>Fonctionnalités :</b> Présentation des projets, section à propos, contact.</li>
+                <li><b>Challenge :</b> Design responsive et animations fluides.</li>
+                <li><b>Résultat :</b> Site vitrine moderne mettant en valeur mon parcours.</li>
+            </ul>
+            <div class="competence-box"><strong>Correspondance tableau :</strong> Organiser son développement professionnel - Développer son projet professionnel.</div>
+        </div>
+        <div class="visual-zone" style="background: transparent; border: none; box-shadow: none;">
+            <div class="screenshot-container">
+                <img src="assets/port.png" class="screenshot screenshot-1" alt="Portfolio - Accueil" style="top: 0; left: 0; z-index: 1;">
+                <img src="assets/proj.png" class="screenshot screenshot-2" alt="Portfolio - Projets" style="top: 120px; left: 120px; z-index: 2;">
             </div>
         </div>
     </div>
